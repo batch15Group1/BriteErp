@@ -10,9 +10,12 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-    @Before
-    public void setup(){
-        System.out.println("Test setup");
+  @Before
+    public void setup(Scenario scenario) {
+        System.out.println(":::: Starting test automation ::::");
+        System.out.println("Browser type :: " + ConfigurationReader.getProperty("browser"));
+        System.out.println("Environment :: "+ ConfigurationReader.getProperty("URL"));
+        System.out.println("Test scenario :: " + scenario.getName());
         Driver.getDriver().manage().window().maximize();
     }
 
