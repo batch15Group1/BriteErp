@@ -59,15 +59,6 @@ public class LoginPage extends BasePage{
     }
 
     /**
-     * Login as inventorymanager User
-     */
-    public void loginAsInventoryManager() {
-        userName.sendKeys(ConfigurationReader.getProperty("inventorymanager"));
-        password.sendKeys(ConfigurationReader.getProperty("passwordinvman"));
-        login.click();
-    }
-
-    /**
      * Login as salesmanager User
      */
     public void loginAsSalesManager() {

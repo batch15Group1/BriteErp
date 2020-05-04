@@ -32,12 +32,6 @@ public class LoginStepDefinitions {
         loginPage.loginAsEventsManager();
     }
 
-    @When("user logs in as a inventory manager")
-    public void user_logs_in_as_a_inventory_manager() {
-        System.out.println("Login as inventory manager");
-        loginPage.loginAsInventoryManager();
-    }
-
     @When("user logs in as a sales manager")
     public void user_logs_in_as_a_sales_manager() {
         System.out.println("Login as inventory manager");

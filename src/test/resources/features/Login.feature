@@ -18,11 +18,6 @@ Feature: Login
     When user logs in as a events manager
     Then user name should be "username"
 
-  @inventory_manager
-  Scenario: Login as inventory manager
-    When user logs in as a inventory manager
-    Then user name should be "username"
-
   @sales_manager
   Scenario: Login as sales manager
     When user logs in as a sales manager
