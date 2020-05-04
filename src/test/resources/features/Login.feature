@@ -14,8 +14,8 @@ Feature: Login
     Then user name should be "username"
 
   @events_manager
-  Scenario: Login as events manager
-    When user logs in as a events manager
+  Scenario: Login as events CRM manager
+    When user logs in as a events CRM Manager
     Then user name should be "username"
 
   @sales_manager
@@ -26,6 +26,11 @@ Feature: Login
   @expenses_manager
   Scenario: Login as expenses manager
     When user logs in as a expenses manager
+    Then user name should be "username"
+
+  @inventory_manager
+  Scenario: Login as inventory manager
+    When user logs in as a inventory manager
     Then user name should be "username"
 
   @Login_with_params
