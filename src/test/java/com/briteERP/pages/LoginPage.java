@@ -42,6 +42,7 @@ public class LoginPage extends BasePage{
 
     /**
      * Login as posmanager user
+       Can access Purchasing and POS module
      */
     public void loginAsPosManager() {
         userName.sendKeys(ConfigurationReader.getProperty("purchasing_manager50"));
@@ -51,8 +52,9 @@ public class LoginPage extends BasePage{
 
     /**
      * Login as eventscrmmanager user
+       Can access Event and CRM module
      */
-    public void loginAsEventsManager() {
+    public void loginAsEvents_CRM_Manager() {
         userName.sendKeys(ConfigurationReader.getProperty("event_srmmanager40"));
         password.sendKeys(ConfigurationReader.getProperty("event_password"));
         login.click();
@@ -60,6 +62,7 @@ public class LoginPage extends BasePage{
 
     /**
      * Login as salesmanager User
+       Can access Sales module
      */
     public void loginAsSalesManager() {
         userName.sendKeys(ConfigurationReader.getProperty("sales_manager30"));
@@ -69,12 +72,25 @@ public class LoginPage extends BasePage{
 
     /**
      * Login as expensesmanager User
+       Can access Expenses module
      */
     public void loginAsExpensesManager() {
         userName.sendKeys(ConfigurationReader.getProperty("calendar_expmanager40"));
         password.sendKeys(ConfigurationReader.getProperty("calendar_password"));
         login.click();
     }
+    
+     /**
+     * Login as inventoryManager User
+       Can access Inventory module
+     */
+    public void loginAsInventoryManager() {
+        userName.sendKeys(ConfigurationReader.getProperty("contacts_imm20"));
+        password.sendKeys(ConfigurationReader.getProperty("contacts_password"));
+        login.click();
+    }
+    
+    
 
 }
 
