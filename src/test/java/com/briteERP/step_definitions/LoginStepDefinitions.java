@@ -26,10 +26,16 @@ public class LoginStepDefinitions {
         loginPage.loginAsPosManager();
     }
 
-    @When("user logs in as a events manager")
-    public void user_logs_in_as_a_events_manager() {
-        System.out.println("Login as Events manager");
-        loginPage.loginAsEventsManager();
+    @When("user logs in as a events CRM Manager")
+    public void user_logs_in_as_a_events_CRM_Manager() {
+        System.out.println("Login as Events CRM manager");
+        loginPage.loginAsEvents_CRM_Manager();
+    }
+    
+     @When("user logs in as a inventory manager")
+    public void user_logs_in_as_a_inventory_manager() {
+        System.out.println("Login as inventory manager");
+        loginPage.loginAsInventoryManager();
     }
 
     @When("user logs in as a sales manager")
