@@ -1,5 +1,6 @@
 package com.briteERP.pages;
 
+import com.briteERP.utilities.BrowserUtils;
 import com.briteERP.utilities.ConfigurationReader;
 import com.briteERP.utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -48,7 +49,8 @@ public class LoginPage extends BasePage{
     public void loginAsPosManager() {
         wait.until(ExpectedConditions.visibilityOf(userName)).sendKeys(ConfigurationReader.getProperty("purchasing_manager50"));
         wait.until(ExpectedConditions.visibilityOf(password)).sendKeys(ConfigurationReader.getProperty("purchasing_password"));
-        login.click();
+        BrowserUtils.wait(3);
+        wait.until(ExpectedConditions.elementToBeClickable(login)).click();
     }
 
     /**
