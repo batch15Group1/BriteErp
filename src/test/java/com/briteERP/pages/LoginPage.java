@@ -5,6 +5,7 @@ import com.briteERP.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage{
     @FindBy(name = "login")
@@ -13,7 +14,7 @@ public class LoginPage extends BasePage{
     @FindBy(name = "password")
     private WebElement password;
 
-    @FindBy(className = "btn btn-primary")
+    @FindBy(css = "[class='btn btn-primary']")
     private WebElement login;
 
     @FindBy(css = "a[href='/web/reset_password?']")
@@ -45,8 +46,8 @@ public class LoginPage extends BasePage{
        Can access Purchasing and POS module
      */
     public void loginAsPosManager() {
-        userName.sendKeys(ConfigurationReader.getProperty("purchasing_manager50"));
-        password.sendKeys(ConfigurationReader.getProperty("purchasing_password"));
+        wait.until(ExpectedConditions.visibilityOf(userName)).sendKeys(ConfigurationReader.getProperty("purchasing_manager50"));
+        wait.until(ExpectedConditions.visibilityOf(password)).sendKeys(ConfigurationReader.getProperty("purchasing_password"));
         login.click();
     }
 
@@ -55,8 +56,8 @@ public class LoginPage extends BasePage{
        Can access Event and CRM module
      */
     public void loginAsEvents_CRM_Manager() {
-        userName.sendKeys(ConfigurationReader.getProperty("event_srmmanager40"));
-        password.sendKeys(ConfigurationReader.getProperty("event_password"));
+        userName.sendKeys(ConfigurationReader.getProperty("events_crm_manager40"));
+        password.sendKeys(ConfigurationReader.getProperty("events_crm_password"));
         login.click();
     }
 
@@ -75,8 +76,8 @@ public class LoginPage extends BasePage{
        Can access Expenses module
      */
     public void loginAsExpensesManager() {
-        userName.sendKeys(ConfigurationReader.getProperty("calendar_expmanager40"));
-        password.sendKeys(ConfigurationReader.getProperty("calendar_password"));
+        userName.sendKeys(ConfigurationReader.getProperty("expenses_manager40"));
+        password.sendKeys(ConfigurationReader.getProperty("expenses_password"));
         login.click();
     }
     
@@ -85,8 +86,8 @@ public class LoginPage extends BasePage{
        Can access Inventory module
      */
     public void loginAsInventoryManager() {
-        userName.sendKeys(ConfigurationReader.getProperty("contacts_imm20"));
-        password.sendKeys(ConfigurationReader.getProperty("contacts_password"));
+        userName.sendKeys(ConfigurationReader.getProperty("inventory_manager20"));
+        password.sendKeys(ConfigurationReader.getProperty("inventory_password"));
         login.click();
     }
     

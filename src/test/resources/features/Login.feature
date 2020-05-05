@@ -11,29 +11,25 @@ Feature: Login
   @pos_manager
   Scenario: Login as pos manager
     When user logs in as a pos manager
-    Then user name should be "username"
+    Then user name should be "POSManager50"
 
   @events_manager
   Scenario: Login as events CRM manager
     When user logs in as a events CRM Manager
-    Then user name should be "username"
+    Then user name should be "EventscCRMmanager40"
 
   @sales_manager
   Scenario: Login as sales manager
     When user logs in as a sales manager
-    Then user name should be "username"
+    Then user name should be "SalesManager30"
 
   @expenses_manager
   Scenario: Login as expenses manager
     When user logs in as a expenses manager
-    Then user name should be "username"
+    Then user name should be "ExpensesManager40"
 
   @inventory_manager
   Scenario: Login as inventory manager
     When user logs in as a inventory manager
-    Then user name should be "username"
+    Then user name should be "InventoryManager20"
 
-  @Login_with_params
-    Scenario: Login with parameters
-      When user enters "storemanager85" username and "UserUser123" password
-      Then user name should be "username"

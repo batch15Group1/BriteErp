@@ -2,7 +2,6 @@ package com.briteERP.step_definitions;
 
 
 import com.briteERP.pages.LoginPage;
-import com.briteERP.utilities.BrowserUtils;
 import com.briteERP.utilities.ConfigurationReader;
 import com.briteERP.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -38,6 +37,7 @@ public class LoginStepDefinitions {
         loginPage.loginAsInventoryManager();
     }
 
+
     @When("user logs in as a sales manager")
     public void user_logs_in_as_a_sales_manager() {
         System.out.println("Login as inventory manager");
@@ -60,8 +60,8 @@ public class LoginStepDefinitions {
     @Then("user name should be {string}")
     public void user_name_should_be(String string) {
         String currentUserLowerCase=loginPage.getCurrentUserName().toLowerCase();
-        string.toLowerCase();
-        Assert.assertEquals(string, currentUserLowerCase);
+        String usernameLowercase=string.toLowerCase();
+        Assert.assertEquals(usernameLowercase, currentUserLowerCase);
     }
 
 }
